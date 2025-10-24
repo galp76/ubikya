@@ -1,0 +1,173 @@
+<!-- https://www.w3schools.com/w3css/tryw3css_templates_startup.htm -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ubikya</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("fondo_negro.png");
+  min-height: 50%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide">Ubikya</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> IMAGENES</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACTO</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Cerrar ×</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button"> IMAGENES</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACTO</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-right w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">Ubikya</span><br>
+    <span class="w3-large">Optimiza tu experiencia de compra. Conecta y encuentra.</span><br>
+  </div> 
+</header>
+
+<div class="w3-container" style="padding:28px 16px">
+  <div style="text-align: center">
+      <video style="width: 60vw; height: auto" controls>
+	<source src="video_con_audio.mp4" type="video/mp4">
+	  Your browser does not support the video tag.
+      </video>
+  </div>
+</div>
+
+<!-- Features Section -->
+<div class="w3-container" style="padding:28px 16px" id="features">
+  <h3 class="w3-center">CARACTERISTICAS</h3>
+  <p class="w3-center w3-large">- Aplicación web que usa la ubicación del usuario para localizar productos y/o servicios en su cercanía.</p>
+  <p class="w3-center w3-large">- Muestra en tiempo real las mejores opciones en base a proximidad.</p>
+  <p class="w3-center w3-large">- Te brinda la oportunidad de acercar tus bienes y/o servicios al consumidor final.</p>
+  <p class="w3-center w3-large">- Presencia multiplataforma (Windows, Linux, Mac, Android, iOS) para captar la atención donde sea que estén los consumidores.</p>  
+</div>
+  
+<!-- Work Section -->
+<div class="w3-container" style="padding:28px 16px" id="work">
+  <h3 class="w3-center">IMAGENES</h3>
+  <p class="w3-center w3-large">Algunos capturas demostrando el funcionamiento de Ubikya</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6" style="text-align: center">
+      <p>Página de inicio de la app</p>
+      <a href="imagenesEnGrande/imagen1.html">
+          <img src="imagen1v2.jpeg" alt="Click para agrandar imagen" style="width: 200px">
+      </a>
+    </div>
+    <div class="w3-col l3 m6" style="text-align: center">
+      <p>Chatbot de asistencia al usuario</p>
+      <a href="imagenesEnGrande/imagen2.html">
+          <img src="imagen2v2.jpeg" alt="Click para agrandar imagen" style="width: 200px">
+      </a>
+    </div>
+    <div class="w3-col l3 m6" style="text-align: center">
+      <p>Resultados según la cercanía al usuario</p>
+      <a href="imagenesEnGrande/imagen5.html">
+          <img src="imagen5.jpeg" alt="Click para agrandar imagen" style="width: 200px">
+      </a>
+    </div>
+    <div class="w3-col l3 m6" style="text-align: center">
+      <p>Información y ubicación geográfica</p>
+      <a href="imagenesEnGrande/imagen4.html">
+          <img src="imagen4.jpeg" alt="Click para agrandar imagen" style="width: 200px">
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Contact Section -->
+<div class="w3-center w3-light-grey w3-padding-64" id="contact">
+  <h3 class="w3-center">CONTACTO</h3>
+  <!--  <p class="w3-center w3-large">Envianos un correo con tus datos para contactarte:</p> -->
+  <div style="margin-top:48px">
+    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: contacto@ubikya.com</p>
+    <br>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Arriba</a>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>

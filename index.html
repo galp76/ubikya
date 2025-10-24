@@ -11,63 +11,105 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body {
+    font-family: "arial", sans-serif
+}
+
+h3 {
+    font-size: 16px;
+}
+
+.title {
+    font-weight: italic;
+    color: darkblue;
+}
 
 body, html {
   height: 100%;
   line-height: 1.8;
 }
 
-/* Full height image header */
-.bgimg-1 {
-  background-position: center;
-  background-size: cover;
-  background-image: url("fondo_negro.png");
-  min-height: 50%;
+/* --- ESTILOS PARA EL HEADER --- */
+header {
+    width: 98.7vw;
+    /*background-color: #d2d2d2;*/
+    padding-left: 20px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+header img {
+    padding-top: 20px;  /* REGLA PARA EL LOGO DE Ubikya  */
+}
+
+video {
+    width: 60vw;
+    height: auto;
+    border: 5px solid black;
+}
+
+.propuestaValor {
+    font-size: 18px;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 .w3-bar .w3-button {
   padding: 16px;
 }
+
+footer {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+    header {
+        width: 95vw;
+    }
+
+    header img {
+        width: 80vw;
+        height: auto;
+        padding-top: 30px;  /* REGLA PARA EL LOGO DE Ubikya  */
+    }
+
+    .slogan {
+        font-size: 13px;
+    }
+
+    video {
+        width: 80vw;
+        height: auto;
+        border: 3px solid black;
+    }
+
+    h4 {
+        font-size: 18px;
+    }
+
+    .propuestaValor {
+        font-size: 16px;
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+}
+
 </style>
 </head>
 <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide">Ubikya</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> IMAGENES</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACTO</a>
-    </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
-
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
-
-<!-- Sidebar on small screens when clicking the menu icon -->
-<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Cerrar ×</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button"> IMAGENES</a>
-  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACTO</a>
-</nav>
-
 <!-- Header with full-height image -->
-<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
-  <div class="w3-display-right w3-text-white" style="padding:48px">
-    <span class="w3-jumbo w3-hide-small">Ubikya</span><br>
-    <span class="w3-large">Optimiza tu experiencia de compra. Conecta y encuentra.</span><br>
-  </div> 
+<header>
+    <img src="logoMediano.jpg">
+    <h3 class="slogan" style="font-style: italic"><strong><span style="color: darkblue">Más visibilidad = </span><span style="color: green">Más clientes </span><span style="color: darkblue">= MÁS VENTAS</span></strong></h3>
 </header>
 
 <div class="w3-container" style="padding:28px 16px">
   <div style="text-align: center">
-      <video style="width: 60vw; height: auto" controls>
+      <video controls>
 	<source src="video_con_audio.mp4" type="video/mp4">
 	  Your browser does not support the video tag.
       </video>
@@ -75,20 +117,23 @@ body, html {
 </div>
 
 <!-- Features Section -->
-<div class="w3-container" style="padding:28px 16px" id="features">
-  <h3 class="w3-center">CARACTERISTICAS</h3>
-  <p class="w3-center w3-large">- Aplicación web que usa la ubicación del usuario para localizar productos y/o servicios en su cercanía.</p>
-  <p class="w3-center w3-large">- Muestra en tiempo real las mejores opciones en base a proximidad.</p>
-  <p class="w3-center w3-large">- Te brinda la oportunidad de acercar tus bienes y/o servicios al consumidor final.</p>
-  <p class="w3-center w3-large">- Presencia multiplataforma (Windows, Linux, Mac, Android, iOS) para captar la atención donde sea que estén los consumidores.</p>  
+<div class="propuestaValor">
+    <h4 class="title"><strong>Características de la aplicación:</strong></h4>
+    <ul>
+        <li>Aplicación web que usa la ubicación del usuario para localizar productos y/o servicios en su cercanía.</li>
+        <li>Muestra en tiempo real las mejores opciones en base a proximidad.</li>
+        <li>Te brinda la oportunidad de acercar tus bienes y/o servicios al consumidor final.</li>
+        <li>Presencia multiplataforma (Windows, Linux, Mac, Android, iOS) para captar la atención donde sea que estén los consumidores.</li>
+    </ul>
 </div>
   
 <!-- Work Section -->
-<div class="w3-container" style="padding:28px 16px" id="work">
-  <h3 class="w3-center">IMAGENES</h3>
-  <p class="w3-center w3-large">Algunos capturas demostrando el funcionamiento de Ubikya</p>
-
-  <div class="w3-row-padding" style="margin-top:64px">
+<div class="propuestaValor" style="margin-bottom: 0px">
+    <h4 class="title"><strong>Imágenes</strong></h4>
+    <h6>Algunos capturas demostrando el funcionamiento de Ubikya</h6>
+</div>
+<div class="w3-container" style="padding:0px 16px 28px 16px; margin-top: 0px" id="work">
+  <div class="w3-row-padding" style="margin-top: 0px">
     <div class="w3-col l3 m6" style="text-align: center">
       <p>Página de inicio de la app</p>
       <a href="imagenesEnGrande/imagen1.html">
@@ -117,6 +162,20 @@ body, html {
 
 </div>
 
+<!--- MAMARRACHADA PROPUESTA POR ANDRES -->
+<div class="propuestaValor">
+    <h4 class="title"><strong>Nuestra propuesta de valor para nuestros clientes:</strong></h4>
+    <ul>
+        <li><span style="color: darkblue"><em><strong>Tu negocio</strong></em></span> es más fácil de encontrar.</li>
+        <li><span style="color: green"><em><strong>Acercas</strong></em></span> tus bienes y servicios a los consumidores finales.</li>
+        <li><span style="color: darkblue"><em><strong>Atraes</strong></em></span> nuevos clientes todos los días.</li>
+        <li>Con <span style="color: darkblue"><em><strong>ubikya.com</strong></em></span>, tu negocio aparece justo cuando alguien lo busca lo que ofreces. Es la app que hace que te encuentren rápido y sin complicaciones. Es la forma más sencilla de tener mejor presencia digital.</li>
+    </ul>
+    <h4><strong>¿Que esperas? Impulsa tu negocio y únete a <span style="color: darkblue"><em>ubikya.com</em></span></h4>
+    <h4>Reserva tu lugar en nuestra <a href="https://preordenes.ubikya.com" target="_blank" title="Ir a sistema de preórdenes de Ubikya"><strong>lista de preórdenes</strong></a> y disfruta de 2 meses gratis de nuestro servicio, ¡cupos limitados!</h4>
+    <h4>¿Tienes dudas o quieres más información? Contáctanos por nuestro correo <span style="color: darkblue"><em><strong>contacto@ubikya.com</strong></em></span>, o por Whatsapp a los números 0422-1764808 / 0424-1764808.</h4>
+</div>
+
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
   <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
@@ -126,18 +185,9 @@ body, html {
   </div>
 </div>
 
-<!-- Contact Section -->
-<div class="w3-center w3-light-grey w3-padding-64" id="contact">
-  <h3 class="w3-center">CONTACTO</h3>
-  <!--  <p class="w3-center w3-large">Envianos un correo con tus datos para contactarte:</p> -->
-  <div style="margin-top:48px">
-    <p><i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"> </i> Email: contacto@ubikya.com</p>
-    <br>
-  </div>
-</div>
-
 <!-- Footer -->
-<footer class="w3-center w3-black w3-padding-64">
+<footer class="w3-center w3-black">
+    <p>© 2025 Ubikya. Todos los derechos reservados.</p>
   <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>Arriba</a>
   <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
