@@ -66,8 +66,8 @@ header img {
     width: 100vw;
     height: auto;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 40px;
+    margin-bottom: 60px;
     display: flex; 
     justify-content: space-around; 
     flex-wrap: wrap;
@@ -77,8 +77,8 @@ header img {
     /* border: 3px solid black; /* LINEA PARA DEBUGGING */
     width: 25vw;
     height: auto;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 40px;
+    margin-bottom: 60px;
 }
 
 .videos video {
@@ -117,7 +117,7 @@ footer {
         font-size: 13px;
     }
 
-    .videoUbikya video {
+    video {
         width: 80vw;
         height: auto;
         border: 3px solid black;
@@ -125,16 +125,6 @@ footer {
 
     h4 {
         font-size: 18px;
-    }
-
-    .contenedorVideos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .videos {
-        width: 100%;
-        max-width: 400px;
     }
 
     .propuestaValor {
@@ -174,6 +164,40 @@ footer {
     </ul>
 </div>
   
+<!-- Work Section -->
+<div class="propuestaValor" style="margin-bottom: 0px">
+    <h4 class="title"><strong>Imágenes</strong></h4>
+    <h6>Algunos capturas demostrando el funcionamiento de Ubikya</h6>
+</div>
+<div class="w3-container" style="padding:0px 16px 28px 16px; margin-top: 0px" id="work">
+  <div class="w3-row-padding" style="margin-top: 0px">
+    <div class="w3-col l3 m6" style="text-align: center">
+      <p>Página de inicio de la app</p>
+      <a href="imagenesEnGrande/imagen1.html">
+          <img src="imagen1v2.jpeg" alt="Click para agrandar imagen" style="width: 200px">
+      </a>
+    </div>
+    <div class="w3-col l3 m6" style="text-align: center">
+      <p>Chatbot de asistencia al usuario</p>
+      <a href="imagenesEnGrande/imagen2.html">
+          <img src="imagen2v2.jpeg" alt="Click para agrandar imagen" style="width: 200px">
+      </a>
+    </div>
+    <div class="w3-col l3 m6" style="text-align: center">
+      <p>Resultados según la cercanía al usuario</p>
+      <a href="imagenesEnGrande/imagen5.html">
+          <img src="imagen5.jpeg" alt="Click para agrandar imagen" style="width: 200px">
+      </a>
+    </div>
+    <div class="w3-col l3 m6" style="text-align: center">
+      <p>Información y ubicación geográfica</p>
+      <a href="imagenesEnGrande/imagen4.html">
+          <img src="imagen4.jpeg" alt="Click para agrandar imagen" style="width: 200px">
+      </a>
+    </div>
+  </div>
+</div>
+
 <!--- Videos --->
 <div class="propuestaValor" style="margin-bottom: 0px">
     <h4 class="title"><strong>Videos</strong></h4>
@@ -188,16 +212,9 @@ footer {
         </video>
     </div>
     <div class="videos">
-        <p>Uso del chatbot</p>
+        <p>Uso del buscador</p>
         <video controls>
-            <source src="chatbot.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-    <div class="videos">
-        <p>Sistema de recomendaciones</p>
-        <video controls>
-            <source src="sistemaRecomendacionesv2.mp4" type="video/mp4">
+            <source src="buscador.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
